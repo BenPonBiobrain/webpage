@@ -1,0 +1,102 @@
+---
+title: "ENVISION"
+output: html_document
+---
+
+---
+
+## **ENVISION - The role of B-vitamins in microbial plankton (CTM2014-59031-P, PI: [Eva Teira](https://ecimat.uvigo.es/es/investigacion/investigadores/177-oceanograf%C3%ADa-biológica-ob/1521-dra-eva-teira-gonzalez.html))**
+
+> Phytoplankton derived dissolved organic matter (DOM) can be readily assimilated by bacterioplankton. The availability of inorganic nutrients and more recently of vitamins has been recognized as limiting factors for auxotrophic phytoplankton growth. However, fundamental understanding on the underlying mechanisms involved in those interactions and the degradation of labile DOM is still rudimentary. Therefore, we conducted mesocosm experiments with nutrient rich seawater from an upwelling system in the North-East Atlantic Ocean as part of the ENVISION project. In order to study the functional gene expression response of natural microbial assemblages during pre- and post-bloom conditions. We infer that such knowledge is crucial for understanding the dynamics, both at the functional gene expression and the community level, of organic matter cycling during pronounced phytoplankton growth.
+
+---
+
+```{r include=F, meassage=F, warnings=F}
+# if (require("ggfortify")) {
+#  map.world <- map_data("world")
+# }
+```
+
+```{r include=F, meassage=F, warnings=F}
+require(tidyverse)
+require(viridis)
+```
+
+```{r include=F, meassage=F, warnings=F}
+project_stations.ENV <- read_tsv("~/Desktop/projects/my_website/website/project_stations.tsv") %>%
+  filter(STATION == "VIGO") %>%
+  mutate(STATION=ifelse(STATION == "VIGO", "ENVISION", ""))
+
+if (!require(map.world.df)) map.world.df <- map_data("world") %>% rename(gr = group)
+```
+
+```{r meassage=F, warnings=F, echo=F, fig.height=12, fig.width=12}
+if (require("maps")) {
+map.world.all.ENV <- ggplot(map.world.df, aes(x = long, y = lat)) +
+  geom_polygon(aes(group = gr)) +
+  geom_point(data=project_stations.ENV, aes(x=LONG, y=LAT, color=STATION), size=15) +
+  scale_color_viridis(discrete=T, option="viridis", direction=1, begin= 0.65, end=1, name="Project") +
+  theme(legend.text=element_text(size=22),
+        legend.title=element_text(size=30)) +
+  theme(axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.ticks = element_blank()) +
+  theme(panel.background = element_blank(),
+        panel.grid.major = element_line(colour = "#3F4851")) +
+  coord_map("ortho", orientation=c(56.6, 16.3, -15))
+map.world.all.ENV
+}
+#ggsave("~/Desktop/PhD_LNU/6_Posters/map.world.all.ENVISION.eps", width = 20, height = 20)
+```
+
+----
+
+**Impressions of the field work**
+
+<div class="polaroid">
+  <img src="ENV_pics_webpage/JPEG/DSCN4825_1.jpg" style="width:100%">
+  <div class="container">
+  <p1>R/V Ramon Margalef</p1>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="ENV_pics_webpage/JPEG/DSCN5220_1.jpg" style="width:100%">
+  <div class="container">
+  <p1>Out at sea</p1>
+  </div>
+</div>
+
+<div class="polaroid">
+<img src="ENV_pics_webpage/JPEG/DSCN5009_1.jpg" style="width:100%"/>
+<div class="container">
+  <p1>Rosette sampling device equipped with Niskin bottles</p1>
+  </div>
+</div>
+
+<div class="polaroid">
+<img src="ENV_pics_webpage/JPEG/DSCN5001_1.jpg" style="width:100%"/>
+<div class="container">
+  <p1>Collecting water from different depth layers</p1>
+  </div>
+</div>
+
+<div class="polaroid">
+<img src="ENV_pics_webpage/JPEG/DSCN5003_1.jpg" style="width:100%"/>
+<div class="container">
+  <p1>Water is coming!</p1>
+  </div>
+</div>
+
+---
+
+<div class="polaroid">
+<img src="ENV_pics_webpage/JPEG/DSCN4905_1.jpg" style="width:100%">
+<div class="container">
+  <p1>After a long day of intensive work finally time to enjoy an incredibly beautiful sunset</p1>
+  </div>
+</div>
+
+---

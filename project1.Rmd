@@ -1,0 +1,62 @@
+---
+title: "DOM"
+output: html_document
+code_download: FALSE
+---
+
+---
+
+## **Influence of dissolved organic matter (DOM) characteristics (i.e. compound class and condensation states) on bacterioplankton community transcription**
+
+> Dissolved organic matter (DOM) represents the main labile carbon source in the ocean. Bacteria are key drivers in biogeochemical cycling of carbon since they assimilate and respire organic matter. However, molecular detail on the interaction between bacteria and DOM is lacking. We thus conducted Baltic Sea seawater culture experiments enriched with either polymers or their corresponding monomers to study the functional gene expression response of heterotrophic and mixotrophic bacteria. These findings will provide novel knowledge of key molecular mechanisms used by marine bacteria to assimilate and metabolize marine DOM. We infer that such knowledge is critical for understanding how functional genes and bacterial community composition impact biogeochemical cycling of DOM.
+
+This study has been accepted for publication in Frontiers in Microbiology - Aquatic Microbiology:<br>
+[Labile dissolved organic matter compound characteristics select for divergence in marine bacterial activity and transcription](https://www.frontiersin.org/articles/10.3389/fmicb.2020.588778/abstract)<br>
+*Front. Microbiol. (2020) | doi: 10.3389/fmicb.2020.588778*
+
+---
+
+```{r include=F, meassage=F, warnings=F}
+if (require("ggfortify")) {
+  map.world <- map_data("world")
+}
+```
+
+```{r include=F, meassage=F, warnings=F}
+suppressPackageStartupMessages(require(viridis))
+suppressPackageStartupMessages(require(tidyverse))
+```
+
+```{r include=F, meassage=F, warnings=F}
+project_stations.DOM <- read_tsv("~/Desktop/projects/my_website/website/project_stations.tsv") %>%
+  filter(STATION == "LMO") %>%
+  mutate(STATION=ifelse(STATION == "LMO", "DOM", ""))
+
+map.world.df <- map.world %>% rename(gr = group)
+```
+
+```{r include=F, meassage=F, warnings=F, echo=F}
+if (require("maps")) {
+map.world.all.DOM <- ggplot(map.world.df, aes(x = long, y = lat)) +
+  geom_polygon(aes(group = gr)) +
+  geom_point(data=project_stations.DOM, aes(x=LONG, y=LAT, color=STATION), size=15) +
+  scale_color_viridis(discrete=T, option="viridis", direction=1, begin= 0.35, end=1, name="Project") +
+  theme(legend.text=element_text(size=22),
+        legend.title=element_text(size=30)) +
+  theme(axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.ticks = element_blank()) +
+  theme(panel.background = element_blank(),
+        panel.grid.major = element_line(colour = "#3F4851")) +
+  coord_map("ortho", orientation=c(56.6, 16.3, -15))
+map.world.all.DOM
+}
+#ggsave("~/Desktop/PhD_LNU/6_Posters/map.world.all.DOM.eps", width = 20, height = 20)
+```
+```{r fig.height=12, fig.width=12, echo=F}
+map.world.all.DOM
+```
+
+---

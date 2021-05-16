@@ -1,0 +1,82 @@
+
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: left;
+  padding: 10px 20px;
+}
+
+img {
+  margin: 0 auto;
+}
+
+img#default {
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 10px 20px;
+  
+}
+
+img#epi{
+  width: 550px;
+  display: block;
+  margin: 0 auto;
+}
+
+img#cv{
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+blockquote {
+  font-style: italic
+}
+
+/* Whole document: */
+body{
+  font-family: Arial;
+  display: block;
+  font-size: 12pt;
+}
+
+/* Header_polaroid */
+p1{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  text-align: center;
+}
+
+/* Header1 */
+h1{
+  font-family: Arial;
+  font-size: 22pt;
+}
+
+/* Headers2and3 */
+h2,h3{
+  font-family: Arial;
+  font-size: 20pt;
+}
+
+/* Header4 */
+h4{
+  font-family: Arial;
+  font-size: 18pt;
+  font-style: italic;
+}
+
+/* Header5 */
+h5{
+  font-family: "Arial";
+  font-size: 30pt;
+  font-style: italic;
+}

@@ -1,0 +1,53 @@
+name: "bens-website"
+output_dir: "."
+navbar:
+  title: "Benjamin Pontiller"
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "About Ben"
+      href: about.html
+    - text: "CV"
+      icon: ion-university
+      href: cv.html
+    - text: "Projects"
+      menu:
+        - text: "DOM"
+          href: project1.html
+        - text: "ENVISION"
+          href: project2.html
+        - text: "KB"
+          href: project3.html
+        - text: "LMO"
+          href: project4.html
+    - text: "Collaborations"
+      menu:
+        - text: "Euks & Bacs"
+          href: project5.html
+        - text: "Zooplankton"
+          href: project6.html
+    - text: "Publications"
+      href: publications.html
+    - text: "Manuscripts"
+      href: manuscripts.html
+    - text: "News"
+      href: news.html
+    - text: "Contact"
+      menu:
+        - text: "Email"
+          icon: ion-email
+          href: "mailto:benjamin.pontiller@lnu.se"
+        - text: "Linkedin"
+          icon: ion-social-linkedin
+          href: "https://www.linkedin.com/in/benjamin-pontiller-11087b108/"
+        - text: "ResearchGate"
+          href: "https://www.researchgate.net/profile/Benjamin_Pontiller"
+output:
+  html_document:
+    toc_float: TRUE
+    highlight: tango
+    include:
+      after_body: footer.html
+    theme: flatly
+    css: style.css
