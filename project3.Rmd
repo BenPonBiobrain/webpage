@@ -23,7 +23,7 @@ require(viridis)
 ```
 
 ```{r include=F, meassage=F, warnings=F}
-project_stations.KB <- read_tsv("~/Desktop/projects/my_website/website/project_stations.tsv") %>%
+project_stations.KB <- read_tsv("~/Desktop/projects/webpage/project_stations.tsv") %>%
   filter(STATION == "KB")
 
 if (!require(map.world.df)) map.world.df <- map_data("world") %>% rename(gr = group)

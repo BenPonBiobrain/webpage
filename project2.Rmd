@@ -23,7 +23,7 @@ require(viridis)
 ```
 
 ```{r include=F, meassage=F, warnings=F}
-project_stations.ENV <- read_tsv("~/Desktop/projects/my_website/website/project_stations.tsv") %>%
+project_stations.ENV <- read_tsv("~/Desktop/projects/webpage/project_stations.tsv") %>%
   filter(STATION == "VIGO") %>%
   mutate(STATION=ifelse(STATION == "VIGO", "ENVISION", ""))
 

@@ -28,7 +28,7 @@ suppressPackageStartupMessages(require(tidyverse))
 ```
 
 ```{r include=F, meassage=F, warnings=F}
-project_stations.DOM <- read_tsv("~/Desktop/projects/my_website/website/project_stations.tsv") %>%
+project_stations.DOM <- read_tsv("~/Desktop/projects//webpage/project_stations.tsv") %>%
   filter(STATION == "LMO") %>%
   mutate(STATION=ifelse(STATION == "LMO", "DOM", ""))
 

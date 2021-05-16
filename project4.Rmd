@@ -25,7 +25,7 @@ require(viridis)
 ```
 
 ```{r include=F, meassage=F, warnings=F}
-project_stations.LMO <- read_tsv("~/Desktop/projects/my_website/website/project_stations.tsv") %>%
+project_stations.LMO <- read_tsv("~/Desktop/projects/webpage/project_stations.tsv") %>%
   filter(STATION == "LMO")
 
 if (!require(map.world.df)) map.world.df <- map_data("world") %>% rename(gr = group)
