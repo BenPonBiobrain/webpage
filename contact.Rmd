@@ -4,8 +4,6 @@ title: "Contact"
 
 ---
 
-- benjamin.pontiller@lnu.se</p>
-
 - [GEOMAR Helmholtz Centre for Ocean Research Kiel](https://www.geomar.de/en/bpontiller)</p>
 
 - [Researchgate](https://www.researchgate.net/profile/Benjamin_Pontiller)</p>
