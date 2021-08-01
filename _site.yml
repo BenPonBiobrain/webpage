@@ -37,7 +37,7 @@ navbar:
       menu:
         - text: "Email"
           icon: ion-email
-          href: "mailto:benjamin.pontiller@lnu.se"
+          href: "mailto:bpontiller@geomar.de"
         - text: "Linkedin"
           icon: ion-social-linkedin
           href: "https://www.linkedin.com/in/benjamin-pontiller-11087b108/"
