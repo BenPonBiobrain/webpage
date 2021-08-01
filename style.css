@@ -24,6 +24,12 @@ img#default {
   
 }
 
+img#qr{
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
 img#epi{
   width: 550px;
   display: block;
@@ -37,9 +43,17 @@ img#cv{
 }
 
 
-blockquote {
+blockquote{
   font-style: italic
 }
+
+
+p2{
+  font-family: Arial;
+  text-align: center;
+  font-size: 14pt;
+}
+
 
 /* Whole document: */
 body{

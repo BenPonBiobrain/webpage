@@ -4,7 +4,8 @@ title: "Publications"
 
 ---
 
-<img id="cv" src="ORCID.png"/>
+<h1 align="center">[ORCID iD](https://orcid.org/0000-0003-4787-7021)</h1>
+<img id="qr" src="ORCID.png"/>
 
 ---
 
