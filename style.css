@@ -27,6 +27,7 @@ img#default {
 img#qr{
   width: 300px;
   display: block;
+  vertical-align:middle;
   margin: 0 auto;
 }
 
