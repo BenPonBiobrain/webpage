@@ -2,8 +2,11 @@
 title: "Publications"
 ---
 
+---
+
 <img id="cv" src="ORCID.png"/>
 
+---
 
 > **Current ongoing projects - 2020**
 
